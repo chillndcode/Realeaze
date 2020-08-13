@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cbcbcb"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/toolbar_color"
+        android:text="Realeaze"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_marginTop="70dp"
+        app:cardElevation="4dp"
+        android:id="@+id/propertyCard"
+
+        >
+        <!-- we will import a layout here for showing property
+         initials.
+         -->
+        <include layout="@layout/property" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout"
+        android:layout_below="@+id/propertyCard"
+        android:layout_marginTop="10dp"
+        android:background="#E8E6E6"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/viewPager"
+        android:background="#C3BFBF"
+        />
+
+</RelativeLayout>
